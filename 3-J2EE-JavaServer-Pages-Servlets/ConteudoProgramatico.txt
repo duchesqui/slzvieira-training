@@ -1,0 +1,151 @@
+J2EE - JavaServer Pages + Servlets
+
+================================================================================
+Conceitos básicos
+================================================================================
+Características;
+Orientação a objetos;
+Portabilidade;
+Escalabilidade;
+Flexibilidade;
+Gerenciamento automático de memória;
+Persistência;
+Recompilação automática;
+Comentários;
+Common Gateway Interface - CGI;
+Servlets;
+Java Server Pages;
+Contêiner;
+Tomcat;
+Ambiente de execução de aplicações Java Servlets e JSP;
+Aplicação Web.
+
+================================================================================
+Ambiente de desenvolvimento
+================================================================================
+JEE;
+Camadas da arquitetura JEE;
+Tomcat;
+Estrutura de diretórios do Tomcat;
+Gerenciando o ciclo de vida do Tomcat;
+Estrutura de diretórios de uma aplicação Web;
+Arquivo WAR;
+Deployment Descriptor;
+Sintaxe do Deployment Descriptor.
+
+================================================================================
+Servlets
+================================================================================
+Estrutura de um Servlet;
+O primeiro Servlet;
+Acessando Servlets;
+GenericServlet;
+API Servlet;
+A comunicação cliente-servidor;
+Solicitações HTTP;
+As fases de um Servlet;
+Inicialização;
+Atendimento a solicitações;
+Finalização;
+Requisições e respostas;
+Fase Request: solicitação (POST e GET);
+Fase Response - dados enviados ao browser;
+Cookies;
+Definindo cookies;
+Definindo parâmetros de inicialização para o Servlet;
+ServletConfig;
+ServletContext;
+Inicializando um Servlet;
+A classe RequestDispatcher;
+Servlets Multithread.
+
+================================================================================
+Java Server Pages
+================================================================================
+Acessando JSP;
+Arquitetura JSP/Servlet;
+Processo de solicitação às páginas JSP;
+As fases de uma página JSP;
+Benefícios da utilização de JSPs;
+Tags JSP;
+Comandos de script - scriplets;
+Declaração de variáveis nos scriplets;
+Exibindo dados no browser com as tags;
+Declarando métodos e variáveis globais com as tags.
+
+================================================================================
+Objetos JSP predefinidos
+================================================================================
+Objetos request/response;
+Objeto session;
+Objeto out;
+Objeto exception;
+Objeto application;
+Objeto pageContext;
+Objeto config;
+Objeto page;
+Utilizando alguns objetos predefinidos JSP.
+
+================================================================================
+Diretivas JSP
+================================================================================
+Diretiva page;
+Diretiva include;
+Diretiva taglib.
+
+================================================================================
+Tratamento de erros
+================================================================================
+ErrorData;
+getErrorData;
+getThrowable;
+getStatusCode;
+getRequestURI;
+getServletName.
+
+================================================================================
+Trocando informações com o usuário no JSP
+================================================================================
+Dados armazenados em campos hidden;
+Dados armazenados no objeto session;
+Dados armazenados em cookies.
+
+================================================================================
+Gerenciando dados dinâmicos com o JSP
+================================================================================
+Criando tabelas;
+Criando gráficos;
+Criando formulários HTML dinâmicos.
+
+================================================================================
+Tag Libraries
+================================================================================
+Custom Tag Library;
+Sintaxe;
+Taglib;
+Definindo tags sem atributos ou corpo;
+Definindo tags com atributos;
+Tags que efetuam acesso ao conteúdo;
+JavaServer Pages Standard Tag Library - JSTL;
+Instalação de JSTL.
+
+================================================================================
+JavaBeans
+================================================================================
+Trabalhando com JavaBeans;
+Especificação do tipo.
+
+================================================================================
+Filtros
+================================================================================
+Interface Filter;
+O fluxo de um filtro;
+O método init;
+O método doFilter;
+O método destroy;
+Definindo um filtro.
+
+================================================================================
+Conexão com banco de dados
+================================================================================
+JDBC.
