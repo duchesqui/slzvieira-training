@@ -1,0 +1,57 @@
+File
+    File(String)
+    boolean exists()
+    boolean isDirectory()
+    boolean createNewFile()
+    boolean mkdir()
+    boolean canExecute()
+    boolean canRead()
+    boolean canWrite()
+    boolean delete()
+    String getName()
+    String getPath()
+    File[] listFiles()
+
+FileWriter
+BufferedWriter
+PrintWriter
+
+FileReader
+BufferedReader
+
+OutputStream
+    void write(int)
+    void write(byte[])
+    void write(byte[], int, int)
+    void flush()
+    void close()
+
+InputStream
+    int read()
+    int read(byte[])
+    int read(byte[], int, int)
+    long skip(long)
+    int available()
+    void close()
+    void mark(int)
+    boolean markSupported()
+    void reset()
+
+FileOutputStream
+ByteArrayOutputStream
+
+FileInputStream
+ByteArrayInputStream
+
+RandomAccessFile
+
+
+Classe OutputStream                 Acessando o sistema de arquivos
+Classe InputStream                  Gravação em arquivos texto
+Leitura de arquivos binários        Leitura em arquivos texto
+Classe FileInputStream              Gravação em arquivos binários
+Leitura de arquivos texto           Leitura em arquivos binários
+Classe FileReader                   
+Classe BufferedReader               
+RandomAccessFile                    
+Path                                
