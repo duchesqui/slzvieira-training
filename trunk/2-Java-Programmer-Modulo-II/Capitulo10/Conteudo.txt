@@ -46,12 +46,32 @@ ByteArrayInputStream
 RandomAccessFile
 
 
-Classe OutputStream                 Acessando o sistema de arquivos
-Classe InputStream                  Gravação em arquivos texto
-Leitura de arquivos binários        Leitura em arquivos texto
-Classe FileInputStream              Gravação em arquivos binários
-Leitura de arquivos texto           Leitura em arquivos binários
-Classe FileReader                   
-Classe BufferedReader               
-RandomAccessFile                    
-Path                                
+Classe OutputStream
+Classe InputStream
+Leitura de arquivos binários
+Classe FileInputStream
+Leitura de arquivos texto
+Classe FileReader
+Classe BufferedReader
+RandomAccessFile
+Path
+
+
+
+Acessando o sistema de arquivos
+    Classe java.io.File
+Gravação em arquivos texto
+    Classe java.io.FileWriter
+    Classe java.io.BufferedWriter
+    Classe java.io.PrintWriter
+Leitura em arquivos texto
+    Classe java.io.FileReader
+    Classe java.io.BufferedReader
+Gravação em arquivos binários
+    Classe java.io.FileOutputStream
+    Classe java.io.ByteArrayOutputStream
+Leitura em arquivos binários
+    Classe java.io.FileInputStream
+    ByteArrayInputStream
+Arquivos de acesso randômico
+    RandomAccessFile
