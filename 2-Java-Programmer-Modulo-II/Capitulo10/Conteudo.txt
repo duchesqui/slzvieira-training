@@ -13,11 +13,30 @@ File
     File[] listFiles()
 
 FileWriter
+    void write(String str)
+    void write(char cbuf[])
+    void flush()
+    void close()
+
 BufferedWriter
+    void newLine()
+
 PrintWriter
+    void write(String s)
+    void print(String s)
+    void println(String x)
+    PrintWriter printf(String format, Object ... args)
 
 FileReader
+    int read()
+    int read(char cbuf[])
+    int read(char cbuf[], int offset, int length)
+    long skip(long n)
+    boolean ready()
+    void close()
+
 BufferedReader
+    String readLine()
 
 OutputStream
     void write(int)
@@ -38,6 +57,12 @@ InputStream
     void reset()
 
 FileOutputStream
+    void write(int b)
+    void write(byte b[])
+    void write(byte b[], int off, int len)
+    void flush()
+    void close()
+
 ByteArrayOutputStream
 
 FileInputStream
@@ -60,18 +85,63 @@ Path
 
 Acessando o sistema de arquivos
     Classe java.io.File
+        File(String)
+        boolean exists()
+        boolean isDirectory()
+        boolean createNewFile()
+        boolean mkdir()
+        boolean canExecute()
+        boolean canRead()
+        boolean canWrite()
+        boolean delete()
+        String getName()
+        String getPath()
+        File[] listFiles()
 Gravação em arquivos texto
     Classe java.io.FileWriter
+        void write(String)
+        void write(char[])
+        void flush()
+        void close()
     Classe java.io.BufferedWriter
+        void newLine()
     Classe java.io.PrintWriter
+        void write(String)
+        void print(String)
+        void println(String)
+        PrintWriter printf(String, Object...)
 Leitura em arquivos texto
     Classe java.io.FileReader
+        int read()
+        int read(char[])
+        int read(char[], int, int)
+        long skip(long)
+        boolean ready()
+        void close()
     Classe java.io.BufferedReader
+        String readLine()
 Gravação em arquivos binários
     Classe java.io.FileOutputStream
+        void write(int)
+        void write(byte[])
+        void write(byte[], int, int)
+        void flush()
+        void close()
     Classe java.io.ByteArrayOutputStream
+        void write(int)
+        void write(byte[], int, int)
+        void writeTo(OutputStream)
+        void reset()
+        int size()
+        byte[] toByteArray()
 Leitura em arquivos binários
     Classe java.io.FileInputStream
-    ByteArrayInputStream
+        int read()
+        int read(byte b[])
+        int read(byte b[], int off, int len)
+        long skip(long n)
+        int available()
+        void close()
+    Classe java.io.ByteArrayInputStream
 Arquivos de acesso randômico
-    RandomAccessFile
+    Classe java.io.RandomAccessFile
