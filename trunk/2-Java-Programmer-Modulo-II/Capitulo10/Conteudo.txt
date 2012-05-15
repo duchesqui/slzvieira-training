@@ -25,11 +25,11 @@ BufferedReader
     String readLine()
 
 OutputStream
-    write(int) : void
-    write(byte[]) : void
-    write(byte[], int, int) : void
-    flush() : void
-    close() : void
+    void write(int)
+    void write(byte[])
+    void write(byte[], int, int)
+    void flush()
+    void close()
 
 InputStream
     read() : int
