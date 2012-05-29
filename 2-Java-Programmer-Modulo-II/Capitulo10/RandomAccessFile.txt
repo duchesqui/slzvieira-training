@@ -1,5 +1,6 @@
 RandomAccessFile(String, String)
 RandomAccessFile(File, String)
+
 readBoolean() : boolean
 readByte() : byte
 readShort() : short
@@ -8,14 +9,15 @@ readInt() : int
 readLong() : long
 readFloat() : float
 readDouble() : double
-writeBoolean(boolean) : void
-writeByte(int) : void
-writeShort(int) : void
-writeChar(int) : void
-writeInt(int) : void
-writeLong(long) : void
-writeFloat(float) : void
-writeDouble(double) : void
+void writeBoolean(boolean)
+void writeByte(int)
+void writeShort(int)
+void writeChar(int)
+void writeInt(int)
+void writeLong(long)
+void writeFloat(float)
+void writeDouble(double)
+void write(byte[])
 
 int skipBytes(int)
 long getFilePointer()
@@ -36,7 +38,6 @@ String readLine()
 String readUTF()
 
 void write(int)
-void write(byte[])
 void write(byte[], int, int)
 
 void writeBytes(String)

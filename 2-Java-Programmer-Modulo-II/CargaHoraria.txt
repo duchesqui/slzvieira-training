@@ -10,9 +10,9 @@ Conjuntos
 Garbage Collector
 Exceções
 Asserções
+JAR
 --------------  Aula 4 -----------------
 Threads
-JAR
 Stream - Fluxo I/O
 --------------  Aula 5 -----------------
 JDBC
