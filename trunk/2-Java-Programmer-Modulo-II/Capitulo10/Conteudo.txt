@@ -1,28 +1,31 @@
+Writer
+    write(String)
+    write(char[])
+    flush()
+    close()
+
 FileWriter
-    void write(String str)
-    void write(char cbuf[])
-    void flush()
-    void close()
 
 BufferedWriter
-    void newLine()
+    newLine()
 
 PrintWriter
-    void write(String s)
-    void print(String s)
-    void println(String x)
-    PrintWriter printf(String format, Object ... args)
+    print(String s)
+    println(String x)
+    printf(String, Object...)
+
+Reader
+    read() : int
+    read(char[]) : int
+    read(char[], int, int) : int
+    skip(long n) : long
+    ready() : boolean
+    close() : void
 
 FileReader
-    int read()
-    int read(char cbuf[])
-    int read(char cbuf[], int offset, int length)
-    long skip(long n)
-    boolean ready()
-    void close()
 
 BufferedReader
-    String readLine()
+    readLine() : String
 
 OutputStream
     void write(int)
