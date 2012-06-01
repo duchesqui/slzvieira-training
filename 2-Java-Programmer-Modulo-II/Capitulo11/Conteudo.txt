@@ -1,0 +1,36 @@
+Banco de dados
+Aplicação cliente/servidor
+JDBC
+Tipos de driver
+
+Pacote java.sql
+java.sql.DriverManager
+    Classpath do driver
+    Carregamento do driver
+javax.sql.DataSource
+
+java.sql.Connection
+java.sql.Statement
+java.sql.PreparedStatement
+    execute()
+    executeQuery()
+    executeBatch()
+    executeUpdate()
+
+ResultSet
+    getInt()
+    getString()
+    getDate()
+    getXXX()
+
+Stored procedures
+java.sql.CallableStatement
+
+Transações
+setAutoCommit()
+commit()
+rollback()
+Modelo de tratamento de erros.
+
+Padrão DAO
+Padrão VO
