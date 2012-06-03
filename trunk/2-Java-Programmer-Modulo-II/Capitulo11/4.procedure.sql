@@ -1,4 +1,4 @@
-CREATE PROCEDURE prc_numero_descricao(IN p_numero INT, OUT p_descricao VARCHAR(100))
+ALTER PROCEDURE prc_numero_descricao(IN p_numero INT, OUT p_descricao VARCHAR(100))
 BEGIN
 
     DECLARE v_grupo_indice INT;
@@ -45,7 +45,7 @@ BEGIN
             END IF;
         END IF;
 
-        IF p_descricao <> "" AND (v_dezena > 0 OR v_unidade > 0) THEN
+        IF p_descricao <> "" AND v_dezena > 0 THEN
             SET p_descricao = CONCAT(p_descricao, " e ");
         END IF;
         
