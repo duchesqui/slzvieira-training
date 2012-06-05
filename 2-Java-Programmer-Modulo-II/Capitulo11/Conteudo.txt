@@ -1,40 +1,83 @@
-Banco de dados
-Aplicação cliente/servidor
-JDBC
-Tipos de driver
+Introdução
+    Aplicação cliente/servidor
+    JDBC
+    Tipos de driver
 
 Pacote java.sql
-java.sql.DriverManager
+    java.sql.DriverManager
+    java.sql.Connection
+    java.sql.Statement
+    java.sql.PreparedStatement
+    java.sql.CallableStatement
+    java.sql.ResultSet
+    java.sql.SQLException
+
+Abrindo e fechando conexões
     Classpath do driver
     Carregamento do driver
-javax.sql.DataSource
+    java.sql.DriverManager
+    URL de conexão
+    java.sql.Connection
+    Método close()
 
-java.sql.Connection
-java.sql.Statement
-java.sql.PreparedStatement
-    execute()
+Operações na base de dados
+    java.sql.Statement
+    executeUpdate()
     executeQuery()
     executeBatch()
-    executeUpdate()
+    execute()
 
-ResultSet
+Operações parametrizadas
+    java.sql.PreparedStatement
+    setInt()
+    setString()
+    setTimestamp()
+    setXXX();
+
+Transações
+    setAutoCommit()
+    commit()
+    rollback()
+    Modelo de tratamento de erros.
+
+Consultas
+    java.sql.ResultSet
+    next()
     getInt()
     getString()
-    getDate()
+    getTimestamp()
     getXXX()
 
 Stored procedures
-java.sql.CallableStatement
-Parâmetros de entrada
-Parâmetros de saída
+    java.sql.CallableStatement
+    Parâmetros de entrada
+    Parâmetros de saída
 
+Design pattern DAO/VO
+    Padrão VO
+    Mapeamento tabela/entidade
+    Padrão DAO
+    Nomenclatura de métodos:
+        save()
+        delete()
+        findAll()
+        findByPk()
+        findByName()
+        findByXXX()
+    DAOException
+    AbstractDAO
+
+Projeto Final
+
+============================================================================
+
+Introdução
+Pacote java.sql
+Abrindo e fechando conexões
+Operações na base de dados
+Operações parametrizadas
 Transações
-setAutoCommit()
-commit()
-rollback()
-Modelo de tratamento de erros.
-
-Padrão VO
-Padrão DAO
-
+Consultas
+Stored procedures
+Design pattern DAO/VO
 Projeto Final
