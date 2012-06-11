@@ -1,0 +1,9 @@
+CHAR, VARCHAR                                                setString()           java.lang.String
+INT, DECIMAL, NUMERIC (sem parte fracionária)                setInt()              int
+DOUBLE, DECIMAL, NUMERIC (podendo haver parte fracionária)   setDouble()           double
+BOOLEAN                                                      setBoolean()          boolean
+DATE                                                         setDate()             java.sql.Date
+TIME                                                         setTime()             java.sql.Time
+DATETIME, TIMESTAMP                                          setTimestamp()        java.sql.Timestamp
+BLOB, MEDIUMBLOB, LONGBLOB                                   setBinaryStream()     java.io.InputStream
+NULL                                                         setNull()
