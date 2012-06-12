@@ -1,0 +1,10 @@
+CREATE PROCEDURE prc_calcula_juros(
+    IN  p_valor_inicial DECIMAL(10,2),
+    IN  p_taxa          DOUBLE,
+    IN  p_prazo         INTEGER,
+    OUT p_valor_final   DECIMAL(10,2))
+BEGIN
+    ...
+    ...
+    ...
+END;
