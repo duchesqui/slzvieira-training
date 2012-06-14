@@ -1,4 +1,0 @@
-Inserir
-Alterar
-Excluir
-Consultar
