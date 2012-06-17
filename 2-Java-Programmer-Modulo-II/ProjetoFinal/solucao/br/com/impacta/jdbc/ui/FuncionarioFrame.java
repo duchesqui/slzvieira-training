@@ -1,17 +1,24 @@
-package br.com.impacta.projetofinal.ui;
+package br.com.impacta.jdbc.ui;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Rectangle;
 import java.text.DecimalFormat;
 import java.text.ParseException;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import br.com.impacta.jdbc.model.CargoVO;
+import br.com.impacta.jdbc.model.FuncionarioVO;
+import br.com.impacta.jdbc.persistence.CargoDAO;
+import br.com.impacta.jdbc.persistence.FuncionarioDAO;
 
 public class FuncionarioFrame extends JInternalFrame {
 
@@ -28,6 +35,9 @@ public class FuncionarioFrame extends JInternalFrame {
 	private JComboBox cmbCargo = null;
 	private JLabel lblSalario = null;
 	private JTextField txtSalario = null;
+	
+	private FuncionarioDAO funcionarioDAO = new FuncionarioDAO();  //  @jve:decl-index=0:
+	private CargoDAO cargoDAO = new CargoDAO();  //  @jve:decl-index=0:
 	
 	/**
 	 * This is the xxx default constructor
@@ -49,6 +59,7 @@ public class FuncionarioFrame extends JInternalFrame {
 		this.setMaximizable(true);
 		this.setResizable(true);
 		this.setContentPane(getPnlRaiz());
+		this.fillCmbCargo();
 	}
 
 	/**
@@ -87,7 +98,7 @@ public class FuncionarioFrame extends JInternalFrame {
 			lblSalario.setText("Salário");
 			lblCargo = new JLabel();
 			lblCargo.setBounds(new Rectangle(15, 65, 256, 21));
-			lblCargo.setText("Cargo:");
+			lblCargo.setText("CargoVO:");
 			lblNome = new JLabel();
 			lblNome.setBounds(new Rectangle(15, 15, 256, 21));
 			lblNome.setText("Nome:");
@@ -128,6 +139,36 @@ public class FuncionarioFrame extends JInternalFrame {
 			btnSalvar = new JButton();
 			btnSalvar.setBounds(new Rectangle(15, 175, 121, 36));
 			btnSalvar.setText("Salvar");
+			btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+
+					FuncionarioVO funcionario = new FuncionarioVO();
+					funcionario.setNome(getTxtNome().getText());
+					
+					if (getCmbCargo().getSelectedIndex() > 0) {
+						CargoVO cargo = (CargoVO) getCmbCargo().getSelectedItem();
+						funcionario.setIdCargo(cargo.getId());
+					}
+					
+					try {
+						funcionario.setSalario(SALARIO_MASK.parse(getTxtSalario().getText()).doubleValue());
+					} catch (ParseException e1) {
+						funcionario.setSalario(0);
+					}
+					
+					try {
+						funcionarioDAO.save(funcionario);
+						JOptionPane.showMessageDialog(FuncionarioFrame.this,
+								"Funcionário salvo com sucesso", "Salvo",
+								JOptionPane.INFORMATION_MESSAGE);
+						cleanFields();
+					} catch (Exception e1) {
+						JOptionPane.showMessageDialog(FuncionarioFrame.this,
+								e1.getMessage(), "Erro",
+								JOptionPane.ERROR_MESSAGE);
+					}
+				}
+			});
 		}
 		return btnSalvar;
 	}
@@ -142,6 +183,11 @@ public class FuncionarioFrame extends JInternalFrame {
 			btnLimpar = new JButton();
 			btnLimpar.setBounds(new Rectangle(150, 175, 121, 36));
 			btnLimpar.setText("Limpar");
+			btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+					cleanFields();
+				}
+			});
 		}
 		return btnLimpar;
 	}
@@ -181,4 +227,24 @@ public class FuncionarioFrame extends JInternalFrame {
 		}
 		return txtSalario;
 	}
+
+	private void fillCmbCargo() {
+		try {
+			List<CargoVO> cargoLista = cargoDAO.findAll();
+			getCmbCargo().addItem(null);
+			for (CargoVO cargo : cargoLista) {
+				getCmbCargo().addItem(cargo);
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, e.getMessage(), "Erro",
+					JOptionPane.ERROR_MESSAGE);
+		}
+	}
+	
+	private void cleanFields() {
+		getTxtNome().setText("");
+		getCmbCargo().setSelectedIndex(0);
+		getTxtSalario().setText("");
+	}
+	
 }  //  @jve:decl-index=0:visual-constraint="10,10"
