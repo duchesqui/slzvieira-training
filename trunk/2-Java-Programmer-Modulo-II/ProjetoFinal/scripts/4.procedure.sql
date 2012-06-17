@@ -1,6 +1,6 @@
 DELIMITER //
 
-CREATE PROCEDURE prc_numero_descricao(IN p_numero INT, OUT p_descricao VARCHAR(100))
+CREATE PROCEDURE impacta.prc_numero_descricao(IN p_numero INT, OUT p_descricao VARCHAR(100))
 BEGIN
 
     DECLARE v_grupo_indice INT;
