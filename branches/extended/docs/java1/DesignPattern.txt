@@ -1,0 +1,28 @@
+Padrões de design
+
+Técnica utilizada em atribuir papéis às classes que compõem uma aplicação.
+
+Tipos de classe:
+	- DAO (Data Access Object): Classe que realiza o acesso e
+	  persistência à base de dados;
+
+	- VO (Value Object): Classe responsável em reter os dados a respeito
+	  de uma entidade;
+	
+	- Service: Classe responsável em executar cálculos e outras regras de
+	  negócio relativas à sua aplicação.
+	
+	- View (Sufixo Servlet, jsp ou Frame): Classe responsável em montar a
+	  tela de comunicação com o usuário.
+
+clone()
+equals(Object)
+finalize()
+getClass()
+hashCode()
+notify()
+notifyAll()
+toString()
+wait()
+wait(long)
+wait(long, int)

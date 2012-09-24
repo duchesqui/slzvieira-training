@@ -1,0 +1,45 @@
+RandomAccessFile(String, String)
+RandomAccessFile(File, String)
+
+readBoolean() : boolean
+readByte() : byte
+readShort() : short
+readChar() : char
+readInt() : int
+readLong() : long
+readFloat() : float
+readDouble() : double
+void writeBoolean(boolean)
+void writeByte(int)
+void writeShort(int)
+void writeChar(int)
+void writeInt(int)
+void writeLong(long)
+void writeFloat(float)
+void writeDouble(double)
+void write(byte[])
+
+int skipBytes(int)
+long getFilePointer()
+void seek(long)
+long length()
+void setLength(long)
+void close()
+
+int read()
+int read(byte[], int, int)
+int read(byte[])
+void readFully(byte[])
+void readFully(byte[], int, int)
+
+int readUnsignedByte()
+int readUnsignedShort()
+String readLine()
+String readUTF()
+
+void write(int)
+void write(byte[], int, int)
+
+void writeBytes(String)
+void writeChars(String)
+void writeUTF(String)
