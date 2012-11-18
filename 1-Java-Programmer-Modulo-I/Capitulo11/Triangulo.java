@@ -1,7 +1,7 @@
 public class Triangulo extends FiguraGeometrica {
 	
-	public double base;
-	public double altura;
+	private double base;
+	private double altura;
 	
 	public Triangulo(double base, double altura) {
 		this.base = base;
