@@ -1,6 +1,6 @@
 public class Circulo extends FiguraGeometrica {
 	
-	public double raio;
+	private double raio;
 	
 	public Circulo(double raio) {
 		this.raio = raio;

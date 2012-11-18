@@ -1,4 +1,5 @@
 public class Motorista extends Funcionario {
+
     private String cnh;
     private String placaAutomovel;
 
@@ -19,8 +20,7 @@ public class Motorista extends Funcionario {
     }
 
     public String toString() {
-        return super.toString();
-             + "\nCNH      : " + cnh
+        return "\nCNH      : " + cnh
              + "\nPlaca    : " + placaAutomovel;
     }
 }
