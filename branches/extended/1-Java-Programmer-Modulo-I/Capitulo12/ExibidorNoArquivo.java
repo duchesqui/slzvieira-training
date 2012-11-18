@@ -4,7 +4,7 @@ public abstract class ExibidorNoArquivo {
 	
 	private static final String FILE_PATH = "calc.txt";
 
-	public void imprimeNoArquivo(double valor) {
+	protected void imprimeNoArquivo(double valor) {
 
 		try {		
 			PrintWriter writer = new PrintWriter(FILE_PATH);

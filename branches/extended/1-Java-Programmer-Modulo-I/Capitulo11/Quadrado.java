@@ -1,6 +1,6 @@
 public class Quadrado extends FiguraGeometrica {
 	
-	public double lado;
+	private double lado;
 
 	public Quadrado(double lado) {
 		this.lado = lado;
